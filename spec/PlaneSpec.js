@@ -4,7 +4,7 @@ describe("Plane", function() {
 
   describe("#land", function() {
       it("expects to receive land", function() {
-        expect(plane.land()).not.toBeUndefined();
+        expect(plane.land).not.toBeUndefined();
       });
   });
-})
+});
