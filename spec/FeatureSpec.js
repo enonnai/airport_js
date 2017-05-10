@@ -5,9 +5,7 @@ describe("Airport", function() {
 
   it("can land a plane at a certain airport", function() {
     plane.land(airport);
-    expect(airport.planes()).toContain(plane);
+    expect(airport.hanger()).toContain(plane);
   });
 
 });
-
-

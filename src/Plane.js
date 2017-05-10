@@ -1,7 +1,4 @@
-function Plane() {
-
-  Plane.prototype.land = function(airport) {
-    airport.planes().push(this);
-  };
-
-}
+function Plane() {}
+Plane.prototype.land = function(airport) {
+  airport.clearForLanding(this);
+};
