@@ -1,8 +1,2 @@
-function Airport() {
-  var array = [];
-
-  this.planes = function() {
-    return array;
-  };
-
-}
+function Airport() { var array = []; }
+Airport.prototype.planes = function() { return array; };
