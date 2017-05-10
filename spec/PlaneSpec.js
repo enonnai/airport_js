@@ -4,13 +4,16 @@ describe("Plane", function() {
   var plane;
 
   beforeEach(function() {
-    var plane = new Plane();
-    airport = jasmine.createSpy('airport');
+    plane = new Plane();
+    airport = jasmine.createSpyObj('airport',['planes']);
       });
 
-  //*describe("#land", function() {
+  describe("#land", function() {
       it("expects to receive land", function() {
-        expect(plane.land(airport)).not.toBeUndefined();
+        plane.land(airport);
+        expect(plane.land).toHaveBeenCalledWith(airport);
+        expect(airport.planes).toHaveBeenCalled();
+        //expect(plane.land(airport)).not.toBeUndefined();
       });
   });
-//*});
+});
